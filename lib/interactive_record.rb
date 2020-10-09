@@ -54,7 +54,7 @@ class InteractiveRecord
   end
   
   def self.find_by(attributes_of_objects)
-    column_name = 
+    column_name = attributes_of_objects.key 
     value = 
     
     sql = "SELECT * FROM #{self.table_name} WHERE #{column_name}= ?"
