@@ -55,7 +55,7 @@ class InteractiveRecord
   
   def self.find_by(attributes_of_objects)
     column_name = attributes_of_objects.keys[0].to_s
-    value = attributes_of_objects.values[1]
+    value = attributes_of_objects.values[0]
     
     sql = "SELECT * FROM #{self.table_name} WHERE #{column_name}= ?"
     DB[:conn].execute(sql, value)
